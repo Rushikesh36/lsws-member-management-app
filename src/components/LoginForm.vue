@@ -45,18 +45,7 @@
         </v-alert>
 
         <div class="mt-12"></div>
-        <router-link to="/membersList">
-            <div class="text-center">
-                <v-btn class="" color="warning" size="x-large">
-                    Initiative
-                    <br>
-                    कार्यकारणी (२०२१ - २०२३)
-                </v-btn>
-
-            </div>
-        </router-link>
-        <div class="mt-12"></div>
-        <v-card class="text-center pt-5 pb-5" color="primary">
+        <v-card class="text-center pt-5 pb-5" color="primary" style="margin-top: 50vh;">
             Developed By
             <br>
             <a href="https://www.linkedin.com/in/abhishek-wani-673a62189/" style="color: inherit;">Abhishek Wani</a> | <a

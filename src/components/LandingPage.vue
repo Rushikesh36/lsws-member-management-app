@@ -101,8 +101,12 @@
     </v-expansion-panel>
   </v-expansion-panels>
 
+  
+  <div class="mt-12"></div>
+  <v-alert v-if="changeDefaultPassword" density="compact" type="warning" title="Change Password"
+    text="Please change your password as it is set to default password"></v-alert>
   <router-link to="/paymentDetails">
-    <div class="text-center mt-5">
+    <div class="text-center" style="margin-top: 15vh;">
       <v-btn color="primary">
         PAYMENT DETAILS
       </v-btn>
@@ -111,9 +115,7 @@
 
 
 
-  <div class="mt-12"></div>
-  <v-alert v-if="changeDefaultPassword" density="compact" type="warning" title="Change Password"
-    text="Please change your password as it is set to default password"></v-alert>
+  
   <div class="mt-12"></div>
   <router-link to="/membersList">
     <div class="text-center">
