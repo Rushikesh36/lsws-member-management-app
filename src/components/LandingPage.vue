@@ -103,8 +103,10 @@
 
   
   <div class="mt-12"></div>
-  <v-alert v-if="changeDefaultPassword" density="compact" type="warning" title="Change Password"
+  <div v-if="password == 123456">
+  <v-alert density="compact" type="warning" title="Change Password"
     text="Please change your password as it is set to default password"></v-alert>
+  </div>
   <router-link to="/paymentDetails">
     <div class="text-center" style="margin-top: 15vh;">
       <v-btn color="primary">
@@ -147,6 +149,7 @@ export default {
     this.$store.dispatch('getInfo');
     this.$store.dispatch('getAllBirthdays');
     console.log(this.info)
+
   },
   computed: {
     info() {
@@ -162,14 +165,7 @@ export default {
 
   },
   methods: {
-    changeDefaultPassword() {
-      if (this.$store.state.password == 123456) {
-        return true;
-      }
-      else {
-        return false;
-      }
-    }
+    
   }
 }
 
