@@ -51,6 +51,10 @@
             <a href="https://www.linkedin.com/in/abhishek-wani-673a62189/" style="color: inherit;">Abhishek Wani</a> | <a
                 href="https://www.linkedin.com/in/rushikesh-wani/" style="color: inherit;">Rushikesh Wani</a>
         </v-card>
+
+        <div class="mt-4 text-center">
+            <a href="https://privacy-policy-59901.web.app/">Privacy Policy</a>
+        </div>
     </section>
 </template>
 
