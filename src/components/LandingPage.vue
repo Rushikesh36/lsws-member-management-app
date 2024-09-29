@@ -25,6 +25,13 @@
     </v-card>
   </div>
 
+  <router-link to="/notices">
+    <div class="text-center" >
+      <v-btn color="primary">
+        Notice
+      </v-btn>
+    </div>
+  </router-link>
 
 
   <h3 class="mb-3">Search Members</h3>

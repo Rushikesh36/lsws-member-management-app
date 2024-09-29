@@ -1,5 +1,5 @@
 import { createStore } from 'vuex';
-import { getProfile, updateProfile, addProfile, deleteProfile, addDocument, getDocument, getReceipt, getResult, getOneReceiptFromFirebase, getAllInfo, deleteDocument, getBirthdays, changeFamilyHead } from './index';
+import { getProfile, updateProfile, addProfile, deleteProfile, addDocument, getDocument, getReceipt, getResult, getOneReceiptFromFirebase, getAllInfo, deleteDocument, getBirthdays, changeFamilyHead, getNotices } from './index';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updatePassword, sendPasswordResetEmail, onAuthStateChanged } from "firebase/auth";
 import router from './router';
 const auth = getAuth();
@@ -36,8 +36,12 @@ const store = createStore({
     },
     info: '',
     birthdays: '',
+    notices: '',
   },
   actions: {
+    async getNotices ({state}) {
+      state.notices = await getNotices();
+    },
     async changeHead({state}, obj){
       await changeFamilyHead(obj.prof1,obj.prof2,state.user);
     },

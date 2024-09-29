@@ -18,12 +18,14 @@ import ChangeHead from '../src/components/ChangeHead';
 import profileSettings from '../src/components/ProfileSettings';
 import paymentDetails from '../src/components/PaymentDetails';
 import MembersList from '../src/components/MembersList';
+import NoticeComponent from '../src/components/NoticeComponent';
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         { path: '/', name: 'home', component: LandingPage},
         { path: '/profile' , name: 'profile', component : ProfilePage},
+        { path: '/notices', name: 'notice', component: NoticeComponent},
         { path: '/changePassword', name: 'profile-forget', component: ForgetPassword},
         { path: '/documents', name: 'document', component : DocumentListingPage},
         { path: '/upload', name: 'document-upload', component : DocumentUploadPage},

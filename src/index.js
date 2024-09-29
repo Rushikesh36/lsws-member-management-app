@@ -16,6 +16,7 @@ const firebaseApp = firebase.initializeApp(config);
 
 const db = firebaseApp.firestore()
 const profileCollection = db.collection('Profiles')
+const notifications = db.collection('Notifications');
 const info = db.collection('Info');
 const documentsCollection = db.collection('Docs');
 
@@ -112,6 +113,16 @@ export const getResult = async (email,year) => {
 export const getOneReceiptFromFirebase = async (id) => {
   const document = await documentsCollection.doc(id).get();
   return document.data();
+}
+
+export const getNotices = async () => {
+  const notices = [];
+  const document = await notifications.orderBy('date', 'desc').get();
+  document.forEach(doc => {
+    notices.push({ ...doc.data(), id: doc.id });
+  });
+  console.log('calys notice', notices);
+  return notices;
 }
 
 export const getAllInfo = async () => {
