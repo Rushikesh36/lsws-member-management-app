@@ -117,7 +117,7 @@ export const getOneReceiptFromFirebase = async (id) => {
 
 export const getNotices = async () => {
   const notices = [];
-  const document = await notifications.orderBy('date', 'desc').get();
+  const document = await notifications.orderBy('date', 'desc').limit(3).get();
   document.forEach(doc => {
     notices.push({ ...doc.data(), id: doc.id });
   });

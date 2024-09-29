@@ -6,6 +6,15 @@
   </div>
   <hr>
   <div class="mt-8"></div>
+  <div class="mb-5">
+    <router-link to="/notices">
+      <div class="text-center" >
+        <v-btn color="primary" class="button" id="glowButton">
+          Notice
+        </v-btn>
+      </div>
+    </router-link>
+  </div>
   <div v-if="birthdays.length != 0">
     <v-card class="mb-4">
       <v-img
@@ -25,13 +34,7 @@
     </v-card>
   </div>
 
-  <router-link to="/notices">
-    <div class="text-center" >
-      <v-btn color="primary">
-        Notice
-      </v-btn>
-    </div>
-  </router-link>
+
 
 
   <h3 class="mb-3">Search Members</h3>
@@ -109,13 +112,13 @@
   </v-expansion-panels>
 
   
-  <div class="mt-12"></div>
+
   <div v-if="password == 123456">
   <v-alert density="compact" type="warning" title="Change Password"
     text="Please change your password as it is set to default password"></v-alert>
   </div>
   <router-link to="/paymentDetails">
-    <div class="text-center" style="margin-top: 15vh;">
+    <div class="text-center" style="margin-top: 3vh;">
       <v-btn color="primary">
         PAYMENT DETAILS
       </v-btn>
@@ -155,7 +158,17 @@ export default {
   mounted() {
     this.$store.dispatch('getInfo');
     this.$store.dispatch('getAllBirthdays');
-    console.log(this.info)
+    console.log(this.info);
+
+    const glowDuration = 10000;
+
+// Get the button element
+const glowButton = document.getElementById('glowButton');
+
+// Function to stop the glowing effect after the set duration
+setTimeout(() => {
+  glowButton.classList.remove('button');
+}, glowDuration);
 
   },
   computed: {
@@ -214,5 +227,42 @@ export default {
 .header p {
   font-size: 1.25rem;
   font-weight: 600;
+}
+
+.button {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+ 
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #004A7F; -webkit-box-shadow: 0 0 3px #004A7F; }
+  50% { background-color: #004A7F; -webkit-box-shadow: 0 0 40px #004A7F; }
+  100% { background-color: #004A7F; -webkit-box-shadow: 0 0 3px #004A7F; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #004A7F; -moz-box-shadow: 0 0 3px #004A7F; }
+  50% { background-color: #004A7F; -moz-box-shadow: 0 0 40px #004A7F; }
+  100% { background-color: #004A7F; -moz-box-shadow: 0 0 3px #004A7F; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+  50% { background-color: #004A7F; box-shadow: 0 0 40px #004A7F; }
+  100% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+}
+
+@keyframes glowing {
+  0% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+  50% { background-color: #004A7F; box-shadow: 0 0 40px #004A7F; }
+  100% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
 }
 </style>
