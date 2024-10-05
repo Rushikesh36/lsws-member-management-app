@@ -24,8 +24,11 @@
                 </v-list-item>
             </v-list>
         </v-card>
-
-        <h2 class="text-center mt-5 mb-5">QR Code</h2>
+        <hr class="mt-4 mb-4">
+        <div class="text-center mt-2 mb-2"><a href="https://wani-payment-page.web.app/" target="_blank"><v-btn color="success">Click here to Pay via UPI app</v-btn></a></div>
+        
+        <hr class="mt-4 mb-4">
+        <h2 class="text-center mt-5 mb-5">Scan this QR Code to Pay</h2>
         <v-img
             src="https://res.cloudinary.com/day9yxxz0/image/upload/v1697477079/Payment%20Details/codtasouiblsze6krign.jpg"></v-img>
         
