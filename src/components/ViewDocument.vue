@@ -1,6 +1,10 @@
 <template>
     <div class="elevation-24 mt-16">
         <v-img :width="width" aspect-ratio="16/9" cover :src="imgSrc"></v-img>
+        <div class="text-center ">
+            <a :href="imgSrc" download="Notice"><v-btn color="green" variant="elevated" class="mb-3">Download</v-btn></a>
+
+        </div>
     </div>
 </template>
 
@@ -25,4 +29,3 @@ export default {
 
 }
 </script>
-
