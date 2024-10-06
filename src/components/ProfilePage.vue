@@ -233,7 +233,7 @@ export default {
     font-weight: 700;
 }
 .prof-img {
-    border-radius: 50%;
+    border-radius: 10%;
 }
 .prof_pic{
     margin-left: 25vw;

@@ -248,7 +248,7 @@ export default {
 
 <style scoped>
 .prof-img {
-    border-radius: 50%;
+    border-radius: 10%;
 }
 .prof_pic{
     margin-left: 35vw;
