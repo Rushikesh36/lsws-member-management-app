@@ -9,6 +9,7 @@
             <h5 class="mt-2">पावती क्रमांक : {{ getTemplateReceipt.receiptNumber }}</h5>
             <h5 class="mt-2">दिनांक : {{ getTemplateReceipt.approvedDate }}</h5>
             <h5 class="mt-2">नाव : {{ getTemplateReceipt.profile.name }}</h5>
+            <h5 class="mt-2">पेमेंट मोड : {{ getTemplateReceipt.paymentMode }}</h5>
         </div>
         <v-table v-if="getTemplateReceipt" class="text-center">
             <thead>
