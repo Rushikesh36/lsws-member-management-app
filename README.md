@@ -1,50 +1,57 @@
-# 📱 LSWS Android App (WebView-based)
+# 📱 LSWS Android App (WebView)
 
 ## 🏢 About the Project
-**LSWS Android App** is a WebView-based Android application developed for **LSWS**, a non-profit organization.  
-The platform helps manage and maintain records of organization members efficiently while automating several operational workflows.
+**LSWS Android App** is a WebView-based Android application built for **LSWS**, a non-profit organization.  
+The system is designed to efficiently manage member records, handle donations, store documents, and automate organizational communication.
 
-Although the core product is a **web application**, it is deployed as an **Android app using WebView**, providing easy mobile access for administrators and staff.
+The core application is a **Vue-based web platform**, deployed on **Firebase Hosting** and wrapped inside an **Android app using WebView** for mobile accessibility.
 
 ---
 
 ## ✨ Key Features
-- 👥 **Member Management**
-  - Store and maintain detailed member records
-  - Quick and efficient member search functionality
 
-- 📄 **Document Management**
-  - Upload and securely store member-related documents
+### 👥 Member Management
+- Maintain complete member records
+- Fast and efficient member search functionality
 
-- 💳 **Donation Management**
-  - Enter donation/payment details
-  - Automatically generate receipts upon successful entry
+### 📄 Document Management
+- Upload and store member-related documents securely
+- Centralized document access for administrators
 
-- 📧 **Automated Emailers**
-  - 🎂 Birthday email notifications
-  - 🧾 Donation receipt emails
-  - 📬 Other automated communication workflows
+### 💳 Donation & Receipt Management
+- Enter donation/payment details
+- Automatic receipt generation after donation entry
+- Receipt details stored for future reference
 
-- 📱 **Android App Deployment**
-  - Website wrapped and deployed as an Android app using WebView
-  - Smooth access on mobile devices without rebuilding the frontend
+### 📧 Automated Emailers (Node.js)
+Automated email workflows implemented using **Node.js with Nodemailer**:
+- 🎂 Birthday email notifications
+- 🧾 Donation receipt emails
+- 📬 Additional automated communication workflows
+
+All emails are triggered securely via backend logic, keeping credentials and business rules off the frontend.
+
+### 📱 Android App Deployment
+- Web application deployed as an Android app using **WebView**
+- No separate mobile frontend required
+- Consistent experience across web and Android
 
 ---
 
 ## 🛠 Tech Stack
+
 ### 🌐 Frontend
 - **Vue.js**
 
-### 🗄 Backend
+### 🗄 Database
 - **Firebase Firestore**
 
-### 🚀 Hosting
-- **Firebase Hosting**
-- Used as a **WebView** inside the Android application
+### ⚙ Backend (Automation & Email)
+- **Node.js**
+- **Nodemailer**
+- Firebase Admin SDK (for secure Firestore access)
 
-### 🤖 Android App
-- Built using **Android Studio**
-- WebView integration for rendering the hosted web app
-
----
+### 🚀 Deployment
+- **Firebase Hosting** (Web App)
+- **Android Studio** (Android App using WebView)
 
